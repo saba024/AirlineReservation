@@ -1,0 +1,66 @@
+@model IEnumerable<AirlineReseravtion.Models.ReservationInfo>
+@{
+    ViewData["Title"] = "ViewMyFlights";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>List of all Booked Flights</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationInfoID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model =>model.FlightNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JourneyDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SeatNumbers)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationInfoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JourneyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeatNumbers)
+            </td>
+
+            <td>
+                <a asp-action="ViewBookedDetails" asp-route-id="@item.ReservationInfoID">Details</a>
+            </td>
+
+            @* 
+                ----< Making the Edit and Delete option visible only to the Administrator >----
+                ----< There is only one admin as per the design and his credentials are saved in appSettings.json >----
+            *@
+            @{
+                if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="DeleteBookedFlight" asp-route-id="@item.ReservationInfoID">Delete</a>
+                    </td>
+                }
+
+                
+            }
+
+        </tr>
+        }
+    </tbody>
+</table>
+

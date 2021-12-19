@@ -1,0 +1,224 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    height:100%;
+  font-size: 14px;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  margin:auto;
+
+}
+footer {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.footContainer {
+   
+    min-height: 100%;
+    position: relative;
+    padding:0px 0px 10px 10px;
+}
+
+input[type="radio"] {
+    margin-right: 0;
+}
+
+.radio-inline {
+    padding-right: 40px;
+}
+
+.radio-container {
+    margin-top: 20px;
+}
+
+.source-destination {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 70px auto;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.passenger-info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content:space-between;
+    width:30%;
+}
+
+.class-of-travel {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.travel-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.dateInput{
+    width:auto
+}
+/*----------------------------------------------------------------------
+    Plane Structure Reference: https://codepen.io
+*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+.plane {
+    margin: auto;
+    max-width: 300px;
+}
+
+.cockpit {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 5px solid #d8d8d8;
+}
+
+.cockpit:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500px;
+        width: 100%;
+        border-radius: 50%;
+        border-right: 5px solid #d8d8d8;
+        border-left: 5px solid #d8d8d8;
+}
+
+.cockpit h1 {
+        width: 60%;
+        margin: 100px auto 35px auto;
+}
+
+.exit {
+    position: relative;
+    height: 50px;
+}
+
+.exit:before, .exit:after {
+        content: "EXIT";
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0px 2px;
+        font-family: "Arial Narrow", Arial, sans-serif;
+        display: block;
+        position: absolute;
+        background: green;
+        color: white;
+        top: 50%;
+        transform: translate(0, -50%);
+ }
+
+.exit:before {
+        left: 0;
+ }
+
+.exit:after {
+        right: 0;
+ }
+
+.fuselage {
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+}
+
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999%;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: -5px;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: outside;
+    float: left;
+}

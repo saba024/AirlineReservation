@@ -1,0 +1,95 @@
+@model AirlineReseravtion.Models.Flights
+
+@{
+    ViewData["Title"] = "AddFlight";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Add New Flight</h3>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddFlight">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FlightNumber" class="control-label"></label>
+                <input asp-for="FlightNumber" class="form-control" />
+                <span asp-validation-for="FlightNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FlightName" class="control-label"></label>
+                <input asp-for="FlightName" class="form-control" />
+                <span asp-validation-for="FlightName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Source" class="control-label"></label>
+                <input asp-for="Source" class="form-control" />
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"></label>
+                <input asp-for="Destination" class="form-control" />
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DepartsOn" class="control-label"></label>
+                <input asp-for="DepartsOn" type="datetime" class="form-control" />
+                <span asp-validation-for="DepartsOn" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="DepartureDate" class="control-label"></label>
+                <input asp-for="DepartureDate" class="form-control dateInput" required type="date" />
+                <span asp-validation-for="DepartureDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ArrivesOn" class="control-label"></label>
+                <input asp-for="ArrivesOn" type="datetime" class="form-control" />
+                <span asp-validation-for="ArrivesOn" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EconomyNos" class="control-label"></label>
+                <input asp-for="EconomyNos" class="form-control" />
+                <span asp-validation-for="EconomyNos" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="FirstNos" class="control-label"></label>
+                <input asp-for="FirstNos" class="form-control" />
+                <span asp-validation-for="FirstNos" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PriceEconomy" class="control-label"></label>
+                <input asp-for="PriceEconomy" class="form-control" />
+                <span asp-validation-for="PriceEconomy" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PriceFirst" class="control-label"></label>
+                <input asp-for="PriceFirst" class="form-control" />
+                <span asp-validation-for="PriceFirst" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViewFlights">Back to List</a>
+</div>

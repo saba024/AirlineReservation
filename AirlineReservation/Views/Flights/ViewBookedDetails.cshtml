@@ -1,0 +1,68 @@
+@model AirlineReseravtion.Models.ReservationInfo
+@{
+    ViewData["Title"] = "BookedFlightDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Booked Flight Details</h3>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FlightNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FlightNumber)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JourneyDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JourneyDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstNames)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstNames)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastNames)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastNames)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+        @{ 
+            string departure = Model.BookingDate.ToString().Substring(0, Model.BookingDate.ToString().IndexOf(" ") + 1);
+        }
+        <dd class="col-sm-10">
+            @departure
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DOBs)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DOBs)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SeatNumbers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SeatNumbers)
+        </dd>
+    </dl>
+</div>
+<hr />
+
+<div>
+    <a asp-action="ViewMyFlights">Back to Flight List</a>
+</div>
